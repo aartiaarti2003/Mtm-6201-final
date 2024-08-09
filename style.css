@@ -1,0 +1,298 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(249, 235, 249, 0.5);
+
+}
+
+/* Navbar design */
+
+.nav {
+    background-color: beige;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.nav-link {
+    color: rgb(44, 79, 156);
+
+}
+
+.nav-link:hover {
+    color: rgb(186, 96, 0);
+    text-shadow: 2px 2px 4px rgba(207, 121, 24, 0.672);
+    transition-delay: 0.15s;
+
+}
+
+.nav .active {
+    border-bottom: 2px solid rgb(44, 79, 156);
+    font-weight: 600;
+    font-size: 101%;
+}
+
+.container-fluid {
+    min-height: 85vh;
+    max-width: 1500px;
+    background-color: rgb(248, 251, 251);
+    color: rgb(44, 79, 156);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #ffffff 50%, rgb(242, 232, 188) 50%);
+}
+
+/* Portfolio page design */
+
+.card {
+    width: 350px;
+    margin-top: 20px;
+    color: rgb(44, 79, 156);
+    border: none;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Ensure padding is included in the width */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    
+    /* Maintain aspect ratio */
+}
+
+/* Media query for screens 1330px and below */
+@media screen and (max-width: 1330px) {
+    .card {
+        width: calc(33.33% - 20px);
+        /* Three cards per row */
+    }
+}
+
+/* Media query for screens 1150px and below */
+@media screen and (max-width: 1150px) {
+    .card {
+        width: calc(50% - 20px);
+        /* Two cards per row */
+    }
+}
+
+
+
+/* Media query for screens 850px and below */
+@media screen and (max-width: 850px) {
+    .container {
+        flex-direction: column;
+        /* Stack cards vertically */
+    }
+
+    .card {
+        width: 100%;
+        /* Full width for each card */
+        margin-right: 0;
+        /* Remove the right margin */
+    }
+}
+
+/* Media query for screens 600px and below */
+@media screen and (max-width: 600px) {
+    .card {
+        padding: 15px;
+        /* Adjust the padding for this screen size */
+    }
+
+    .card img {
+        height: 200px;
+        /* Adjust the image height */
+    }
+}
+
+/* Media query for screens 400px and below */
+@media screen and (max-width: 400px) {
+    .card {
+        padding: 10px;
+        /* Adjust the padding for this screen size */
+    }
+
+    .card img {
+        height: 180px;
+        /* Adjust the image height */
+    }
+}
+
+
+/* About me page design */
+.description {
+    flex: 1;
+    color: rgb(44, 79, 156);
+}
+
+.description h1 {
+    margin-top: 0;
+}
+
+.description p {
+    line-height: 1.6;
+}
+
+.profile img {
+    max-width: 100%;
+    height: auto;
+    margin: 10% 0;
+    box-shadow: 0 24px 28px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-info {
+    border-color: rgb(44, 79, 156);
+    color: rgb(44, 79, 156);
+}
+
+.btn-outline-info:hover {
+    background-color: rgb(44, 79, 156);
+}
+
+@media (max-width: 990px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile {
+        margin-bottom: 20px;
+    }
+
+    .profile img {
+        margin-right: 0;
+    }
+
+    .description{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/*resume design */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid rgb(44, 79, 156);
+    border-bottom: 2px solid rgb(44, 79, 156);
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.header .contact-info {
+    flex: 1;
+    text-align: center;
+}
+
+.header .contact-info.left {
+    text-align: left;
+}
+
+.header .contact-info.right {
+    text-align: right;
+}
+
+.column {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgb(44, 79, 156);
+    flex: 1;
+    width: 280px;
+}
+
+h2 {
+    border-bottom: 2px solid rgb(44, 79, 156);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 990px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .contact-info {
+        text-align: center;
+    }
+
+    .stack{
+        flex: 100%;
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .stack ul{
+        border: none;
+    }
+}
+
+
+/* footer design */
+
+footer {
+    background-color: beige;
+    color: rgb(44, 79, 156);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
